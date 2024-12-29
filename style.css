@@ -1,0 +1,148 @@
+/* General Styling */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to bottom, #1e1250, #4b248e);
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  color: #e4d9ff;
+  margin: 0;
+}
+
+/* Typography */
+h1 {
+  margin-top: 20px;
+  color: #e0c3fc;
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 2px;
+}
+
+h2 {
+  color: #d6b3ff;
+  margin-bottom: 20px;
+  font-weight: 500;
+  font-size: 1.5rem;
+}
+
+/* Big Cup */
+.cup {
+  width: 150px;
+  height: 350px;
+  background: linear-gradient(to top, #2a1869, #4e33a9);
+  border: 4px solid #6f42c1;
+  border-radius: 0 0 40px 40px;
+  margin: 30px auto;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease-in-out;
+}
+
+.cup:hover {
+  transform: scale(1.05);
+  border-color: #9b6de9;
+}
+
+.remained,
+.percentage {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+
+.remained {
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.6rem;
+  color: #e4d9ff;
+  font-weight: 600;
+}
+
+.remained small {
+  display: block;
+  font-size: 1rem;
+  color: #cbb7ff;
+}
+
+.percentage {
+  bottom: 0;
+  background: linear-gradient(to bottom, #6f42c1, #53129b);
+  color: #ffffff;
+  font-weight: bold;
+  line-height: 50px;
+  height: 0;
+  border-radius: 0 0 40px 40px;
+  transition: height 0.3s ease-in-out;
+  box-shadow: inset 0 -4px 8px rgba(0, 0, 0, 0.4);
+}
+
+/* Small Cups */
+.cups {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px auto;
+  max-width: 500px;
+}
+
+.cup-small {
+  width: 80px;
+  height: 100px;
+  border: 3px solid #7c4ce0;
+  margin: 10px;
+  border-radius: 0 0 20px 20px;
+  background: linear-gradient(to bottom, #3a187b, #5c2ba3);
+  text-align: center;
+  line-height: 100px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #e0c3fc;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.cup-small:hover {
+  transform: scale(1.1);
+  background: linear-gradient(to bottom, #a478ff, #8460f0);
+  color: white;
+  border-color: #9b6de9;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+
+.cup-small.full {
+  background: linear-gradient(to bottom, #6f42c1, #53129b);
+  color: white;
+  border-color: #c49ef7;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .cup-small {
+    width: 65px;
+    height: 85px;
+    line-height: 85px;
+  }
+
+  .cup {
+    width: 130px;
+    height: 300px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
